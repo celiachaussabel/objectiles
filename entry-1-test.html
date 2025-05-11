@@ -22,7 +22,7 @@
 
   <script>
     showIntroVideo('entry-1/animation-entry-1.2.mp4', 1000, false, false, true, false);
-  
+
 
     // BACKGROUND MUSIC
     var music = new Audio('0-music/compdata-r0.mp3');
@@ -43,13 +43,25 @@
       startMusic();
       console.log('Click detected (capture phase)');
     }, true); // true = use capture phase
-  
-  
+
+
   </script>
 
   <div class="container">
 
-    <img src="hallway/button-pushstick.png" class="button" style="top: 785px; left: 350px; width: 160px; height: auto;"
+    <!-- example of a video popup-->
+    <img id="pushstick-btn" src="hallway/button-pushstick.png" class="button"
+      style="top: 785px; left: 350px; width: 160px; height: auto;" onclick="popup.showVideo({
+        videos: 'entry-1/animation-entry-1.2.mp4',
+        name: 'pushstick-test',
+        fullscreen: true,
+        tintBackground: false,
+        takeOverScreen: true,
+        fade: true
+      })">
+
+    <!--
+<img src="hallway/button-pushstick.png" class="button" style="top: 785px; left: 350px; width: 160px; height: auto;"
       onclick="popup.showImage({
         images: 'hallway/animation-pushstick.gif',
         name: 'pushstick',
@@ -58,6 +70,7 @@
         takeOverScreen: true,
         fade: true
       })">
+-->
 
     <img src="hallway/button-stair.png" class="button" style="top: 825px; left: 840px; width: 395px; height: auto;"
       onclick="popup.showImage({
@@ -69,11 +82,8 @@
         fade: true
       })">
 
-    <img src="all/button-back.png" class="button" style="top: 950px; left: 50px; width: 100px; height: auto;"
-      onclick="fadeToScene('character.html')">
-
-    <img src="all/button-next.png" class="button" style="top: 950px; left: 1750px; width: 100px; height: auto;"
-      onclick="fadeToScene('livingroom-interactive.html')">
+    <button class="button button-back" onclick="fadeToScene('character.html')"></button>
+    <button class="button button-next" onclick="fadeToScene('livingroom-interactive.html')"></button>
 
   </div>
 
