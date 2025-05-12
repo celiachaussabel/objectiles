@@ -15,6 +15,12 @@
     .container {
       background: url('trash/bgd-trash1.png') 100% 100%;
     }
+
+    .button{
+      cursor: url('all/cursor-lifesaver.png'), auto;
+    }
+
+
   </style>
 </head>
 
@@ -24,14 +30,16 @@
   <div class="container">
 
     <img src="hallway/button-pushstick.png" class="button" style="top: 785px; left: 350px; width: 160px; height: auto;"
-      onclick="popup.showImage({
-        images: 'trash/animation-steps-4.gif',
-        name: 'pushstick',
-        fullscreen: true,
-        tintBackground: false,
-        takeOverScreen: true,
-        fade: true
-      })">
+      onclick="popup.showVideo({
+           videos: 'trash/animation-pipe.mp4',
+           name: 'pipe',
+           fullscreen: true,
+           tintBackground: false,
+           takeOverScreen: true,
+           fade: true,
+           dismissOnEnd: false,
+           mute: false,
+         })">
 
     <img src="hallway/button-stair.png" class="button" style="top: 825px; left: 840px; width: 395px; height: auto;"
       onclick="popup.showImage({

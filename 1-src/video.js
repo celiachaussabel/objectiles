@@ -38,7 +38,7 @@ function showIntroVideo(videoPath, delay = 0, tintBackground = true, center = tr
                 tintBackground: tintBackground,
                 takeOverScreen: true,
                 style: center ? null : 'position: absolute; top: 0; left: 0; width: 100%; height: 100%;',
-                fade: true,
+                fade: false,
                 onDismiss: onDismiss,
                 dismissOnEnd: endAction !== 'loop'
             });
@@ -78,7 +78,7 @@ window.videoUtils = {
             src,
             fadeDuration = 0,
             autoplay = true,
-            muted = true,
+            muted = false,
             playsinline = true,
             skippable = true,
             loop = false,
